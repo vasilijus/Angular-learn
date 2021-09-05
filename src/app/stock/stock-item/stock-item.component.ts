@@ -19,6 +19,10 @@ export class StockItemComponent implements OnInit {
       new Stock('Test Stock Comp', 'TSC', 92, 104),
       new Stock('Test Apple Farm', 'TAF', 12, 24),
       new Stock('Test Metal Sheets', 'TMS', 52, 74),
+      new Stock('Test Metal Sheets', 'TMS', 52, 74),
+      new Stock('Test Metal Sheets', 'TMS', 52, 74),
+      new Stock('Test Metal Sheets', 'TMS', 52, 74),
+      new Stock('Test Metal Sheets', 'TMS', 52, 74),
     ];
 
     // let diff = (this.stock.price / this.stock.previousPrice) - 1;
