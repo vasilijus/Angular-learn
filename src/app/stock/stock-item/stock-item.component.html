@@ -1,21 +1,24 @@
 <!-- <p>stock-item works!</p> -->
 <div class="stocks-board">
 
-  <div class="stock-container" *ngFor="let stock of stocks, index as i">
+  <div class="stock-container"
+      *ngFor="let stock of stocks, index as i, trackBy: trackStockByCode">
 
-    <div class="name">
+    <div>
+      <div class="name item-{{ i }} ">
 
-      <h3>{{ stock.name + ' (' + stock.code + ') '  }}</h3>
+        <h3>{{ stock.name + ' (' + stock.code + ') '  }}</h3>
 
-      <div class="price"
-          [class]="stock.isPositiveChange() ? 'positive' : 'negative' ">
-          ${{ stock.price }}<br>
+        <div class="price"
+            [class]="stock.isPositiveChange() ? 'positive' : 'negative' ">
+            ${{ stock.price }}<br>
+        </div>
+
+        <button (click)="toggleFavorite($event, i)"
+          *ngIf="!stock.favorite">Add to Favorite</button>
+        <button (click)="toggleFavorite($event, i)"
+          *ngIf="stock.favorite">Remove from Favorite</button>
       </div>
-
-      <button (click)="toggleFavorite($event, i)"
-        *ngIf="!stock.favorite">Add to Favorite</button>
-      <button (click)="toggleFavorite($event, i)"
-        *ngIf="stock.favorite">Remove from Favorite</button>
     </div>
 
   </div>
