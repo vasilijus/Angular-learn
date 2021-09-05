@@ -1,5 +1,5 @@
 export class Stock {
-  favorite: boolean = true;
+  favorite: boolean = false;
 
   constructor(public name: string,
               public code: string,
