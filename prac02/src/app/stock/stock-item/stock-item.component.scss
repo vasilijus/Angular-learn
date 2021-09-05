@@ -1,0 +1,35 @@
+.stocks-board {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+
+  .stock-container {
+    // flex: 1 0 21%;
+    width: 28%;
+    max-width: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px;
+    margin: 2px 0px;
+
+    text-align:  center;
+   }
+   .stock-container .name h3, .stock-container .name h4 {
+    display: i
+   }
+
+   .positive {
+    color: green;
+   }
+   .negative {
+    color: red;
+   }
+  .large-change {
+   font-size: 1.2em;
+  }
+  .small-change {
+  font-size: 0.8em;
+  }
+
+}
