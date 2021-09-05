@@ -36,7 +36,6 @@ export class StockItemComponent implements OnInit {
     return stock.code;
   }
   ngOnInit(): void {
-    console.log("OnNG-INIT")
   }
 
 

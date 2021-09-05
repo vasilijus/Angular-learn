@@ -1,0 +1,15 @@
+
+<div class="stocks-board">
+
+  <div class="stock-container"
+      *ngFor="let stock of list, index as i">
+
+      <app-product-item-component [stock]="stock"></app-product-item-component>
+
+  </div>
+
+
+</div>
+
+
+

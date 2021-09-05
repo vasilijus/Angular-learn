@@ -1,0 +1,17 @@
+
+<div class="stock-container">
+
+    <div>
+      <div class="name item">
+
+        <h3>{{ stock.name + ' (' + stock.code + ') '  }}</h3>
+
+        <div class="price"
+            [class]="stock.isPositiveChange() ? 'positive' : 'negative' ">
+            ${{ stock.price }}<br>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
