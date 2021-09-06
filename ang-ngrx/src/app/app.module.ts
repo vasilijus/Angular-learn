@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
-import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { StoreRouterConnectingModule, routerReducer } from '@ngrx/router-store';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,14 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
   ],
   imports: [
     BrowserModule,
-    StoreModule.forRoot({}, {}),
+    // RouterModule,
+
+    StoreModule.forRoot({
+      router: routerReducer,
+    }),
+    RouterModule.forRoot([
+      // routes
+    ]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     EffectsModule.forRoot([]),
     StoreRouterConnectingModule.forRoot()
