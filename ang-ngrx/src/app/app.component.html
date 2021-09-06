@@ -1,9 +1,0 @@
-<button class="btn fz-60 m-20 p-30" (click)="increase()">+1</button>
-<button class="btn fz-60 m-20 p-30" (click)="decrease()"
-  [disabled]="cannotDecrease">-1</button>
-<button class="btn fz-60 m-20 p-30" (click)="reset()"
-  [disabled]="cannotDecrease">=0</button>
-
-<div class="output fz-60">Counter = {{ counter }}</div>
-<p class=" m-20"
-  *ngIf="updatedAt">Updated @: {{ updatedAt | date:"HH:mm:ss dd:MM:yyyy"}}</p>
